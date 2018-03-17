@@ -1,6 +1,5 @@
 ﻿Imports System.Drawing.Drawing2D
 
-
 Public Class Principal
 
     Public impédance_vraie As Double
@@ -117,6 +116,7 @@ Public Class Principal
             Fresnel_RL_série()
         End If
     End Sub
+
     Sub Fresnel_RLC_série()
         Dim g As Graphics = Fresnel.CreateGraphics
         g.Clear(Color.LightGray)
@@ -267,7 +267,7 @@ Public Class Principal
             End If
         End If
 
-            If RLC_parallèle.Checked Then
+        If RLC_parallèle.Checked Then
             If Val(Tension_Ur.Text) > Val(Tension_Uc.Text) Then
                 maxi = Val(Tension_Ur.Text)
             Else
@@ -293,8 +293,8 @@ Public Class Principal
                     échelle = (120 / maxi)
                 End If
             End If
-            End If
-            If RC_série.Checked Then
+        End If
+        If RC_série.Checked Then
             If Val(Tension_Ur.Text) > Val(Tension_Uc.Text) Then
                 maxi = Val(Tension_Ur.Text)
             Else
@@ -316,8 +316,8 @@ Public Class Principal
                     échelle = (130 / maxi)
                 End If
             End If
-            End If
-            If RL_série.Checked Then
+        End If
+        If RL_série.Checked Then
             If Val(Tension_Ur.Text) > Val(Tension_UL.Text) Then
                 maxi = Val(Tension_Ur.Text)
             Else
@@ -339,7 +339,7 @@ Public Class Principal
                     échelle = (130 / maxi)
                 End If
             End If
-            End If
+        End If
         Echelle.Value = CInt(échelle)
     End Sub
 
@@ -398,6 +398,7 @@ Public Class Principal
         Puissance_apparente.Text = Math.Round(Val(Tension_efficace.Text) * (Val(Tension.Text) / Val(impédance_vraie) / Math.Sqrt(2)), 4) & " " & "VA"
         Facteur_puissance.Text = Math.Round(Val(Résistance.Text) / Val(impédance_vraie), 3)
     End Sub
+
     Sub calcul_RLC_parallèle()
         visibilité()
         Résistance1.Text = Val(Résistance.Text) & " " & "Ω"
@@ -927,4 +928,5 @@ Public Class Principal
     Private Sub Fresnel_Click(sender As Object, e As EventArgs) Handles Fresnel.Click
         Graphique.Show()
     End Sub
+
 End Class
