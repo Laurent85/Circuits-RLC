@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DB00414-3575-4B53-AD1D-BBC1B7EDC610}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Circuit RLC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Manceau\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Circuit RLC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Circuit RLC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Bobine.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BDEA37241A06576E03C6FB902E259350FFDD0EDA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsApplication1_CléTemporaire.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Bande_passante_série.Designer.vb">
+      <DependentUpon>Bande_passante_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bande_passante_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bode.Designer.vb">
+      <DependentUpon>Bode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Déphasage_parallèle.Designer.vb">
+      <DependentUpon>Déphasage_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Déphasage_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Déphasage_série.Designer.vb">
+      <DependentUpon>Déphasage_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Déphasage_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facteur_de_qualité_série.Designer.vb">
+      <DependentUpon>Facteur_de_qualité_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facteur_de_qualité_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facteur_puissance_série.Designer.vb">
+      <DependentUpon>Facteur_puissance_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facteur_puissance_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facteur_qualité_parallèle.Designer.vb">
+      <DependentUpon>Facteur_qualité_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facteur_qualité_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fréquence_coupure_bas_parallèle.Designer.vb">
+      <DependentUpon>Fréquence_coupure_bas_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fréquence_coupure_bas_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fréquence_coupure_haut_parallèle.Designer.vb">
+      <DependentUpon>Fréquence_coupure_haut_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fréquence_coupure_haut_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fréquence_de_résonance.Designer.vb">
+      <DependentUpon>Fréquence_de_résonance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fréquence_de_résonance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphique.Designer.vb">
+      <DependentUpon>Graphique.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Graphique.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impédance_RLC_parallèle.Designer.vb">
+      <DependentUpon>Impédance_RLC_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Impédance_RLC_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impédance_série.Designer.vb">
+      <DependentUpon>Impédance_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Impédance_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intensité_iC_parallèle.Designer.vb">
+      <DependentUpon>Intensité_iC_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intensité_iC_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intensité_iL_parallèle.Designer.vb">
+      <DependentUpon>Intensité_iL_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intensité_iL_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intensité_ir_parallèle.Designer.vb">
+      <DependentUpon>Intensité_ir_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intensité_ir_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intensité_i_parallèle.Designer.vb">
+      <DependentUpon>Intensité_i_parallèle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intensité_i_parallèle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intensité_série.Designer.vb">
+      <DependentUpon>Intensité_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intensité_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fréquence_coupure_haut_série.Designer.vb">
+      <DependentUpon>Fréquence_coupure_haut_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fréquence_coupure_haut_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fréquence_coupure_bas_série.Designer.vb">
+      <DependentUpon>Fréquence_coupure_bas_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fréquence_coupure_bas_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Puissance_active_série.Designer.vb">
+      <DependentUpon>Puissance_active_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Puissance_active_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puissance_apparente_série.Designer.vb">
+      <DependentUpon>Puissance_apparente_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Puissance_apparente_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puissance_réactive_série.Designer.vb">
+      <DependentUpon>Puissance_réactive_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Puissance_réactive_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulsation.Designer.vb">
+      <DependentUpon>Pulsation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pulsation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Période_série.Designer.vb">
+      <DependentUpon>Période_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Période_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Réactance_capacitive_série.Designer.vb">
+      <DependentUpon>Réactance_capacitive_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Réactance_capacitive_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Réactance_inductive_série.Designer.vb">
+      <DependentUpon>Réactance_inductive_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Réactance_inductive_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tension_condensateur_série.Designer.vb">
+      <DependentUpon>Tension_condensateur_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tension_condensateur_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tension_efficace.Designer.vb">
+      <DependentUpon>Tension_efficace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tension_efficace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tension_inductance_série.Designer.vb">
+      <DependentUpon>Tension_inductance_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tension_inductance_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tension_UR_série.Designer.vb">
+      <DependentUpon>Tension_UR_série.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tension_UR_série.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bande_passante_série.resx">
+      <DependentUpon>Bande_passante_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bode.resx">
+      <DependentUpon>Bode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Déphasage_parallèle.resx">
+      <DependentUpon>Déphasage_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Déphasage_série.resx">
+      <DependentUpon>Déphasage_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facteur_de_qualité_série.resx">
+      <DependentUpon>Facteur_de_qualité_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facteur_puissance_série.resx">
+      <DependentUpon>Facteur_puissance_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facteur_qualité_parallèle.resx">
+      <DependentUpon>Facteur_qualité_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fréquence_coupure_bas_parallèle.resx">
+      <DependentUpon>Fréquence_coupure_bas_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fréquence_coupure_haut_parallèle.resx">
+      <DependentUpon>Fréquence_coupure_haut_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fréquence_de_résonance.resx">
+      <DependentUpon>Fréquence_de_résonance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphique.resx">
+      <DependentUpon>Graphique.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impédance_RLC_parallèle.resx">
+      <DependentUpon>Impédance_RLC_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impédance_série.resx">
+      <DependentUpon>Impédance_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intensité_iC_parallèle.resx">
+      <DependentUpon>Intensité_iC_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intensité_iL_parallèle.resx">
+      <DependentUpon>Intensité_iL_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intensité_ir_parallèle.resx">
+      <DependentUpon>Intensité_ir_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intensité_i_parallèle.resx">
+      <DependentUpon>Intensité_i_parallèle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intensité_série.resx">
+      <DependentUpon>Intensité_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fréquence_coupure_haut_série.resx">
+      <DependentUpon>Fréquence_coupure_haut_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fréquence_coupure_bas_série.resx">
+      <DependentUpon>Fréquence_coupure_bas_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puissance_active_série.resx">
+      <DependentUpon>Puissance_active_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puissance_apparente_série.resx">
+      <DependentUpon>Puissance_apparente_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puissance_réactive_série.resx">
+      <DependentUpon>Puissance_réactive_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulsation.resx">
+      <DependentUpon>Pulsation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Période_série.resx">
+      <DependentUpon>Période_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Réactance_capacitive_série.resx">
+      <DependentUpon>Réactance_capacitive_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Réactance_inductive_série.resx">
+      <DependentUpon>Réactance_inductive_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tension_condensateur_série.resx">
+      <DependentUpon>Tension_condensateur_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tension_efficace.resx">
+      <DependentUpon>Tension_efficace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tension_inductance_série.resx">
+      <DependentUpon>Tension_inductance_série.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tension_UR_série.resx">
+      <DependentUpon>Tension_UR_série.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="WindowsApplication1_CléTemporaire.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bobine.ico" />
+    <Content Include="GRAPH.ICO" />
+    <None Include="Resources\intensité_i_parallèle.jpg" />
+    <None Include="Resources\Tension_Ur_série.jpg" />
+    <None Include="Resources\Intensité_ir_parallèle.jpg" />
+    <None Include="Resources\Intensité_il_parallèle.jpg" />
+    <None Include="Resources\Intensité_ic_parallèle.jpg" />
+    <None Include="Resources\Puissance_réactive.jpg" />
+    <None Include="Resources\Puissance_apparente.jpg" />
+    <None Include="Resources\Puissance_active.jpg" />
+    <None Include="Resources\Facteur_de_puissance.jpg" />
+    <None Include="Resources\Fréquence coupure haut parallèle.jpg" />
+    <None Include="Resources\Fréquence coupure bas parallèle.jpg" />
+    <None Include="Resources\Tension_UL_série.jpg" />
+    <None Include="Resources\Tension_UC_série.jpg" />
+    <None Include="Resources\Tension_efficace.jpg" />
+    <None Include="Resources\Pulsation.jpg" />
+    <None Include="Resources\Période.jpg" />
+    <None Include="Resources\Intensité_série.jpg" />
+    <None Include="Resources\Impédance_RLC_série.jpg" />
+    <None Include="Resources\Impédance_RLC_parallèle.jpg" />
+    <None Include="Resources\Impédance_inductance.jpg" />
+    <None Include="Resources\Impédance_condensateur.jpg" />
+    <None Include="Resources\fréquence_résonance.jpg" />
+    <None Include="Resources\Facteur_qualité_série.jpg" />
+    <None Include="Resources\Facteur_qualité_parallèle.jpg" />
+    <None Include="Resources\Déphasage_parallèle.jpg" />
+    <None Include="Resources\Déphasage série.jpg" />
+    <None Include="Resources\Bande_passante.jpg" />
+    <None Include="Resources\Fréquence coupure bas.jpg" />
+    <None Include="Resources\Fréquence coupure haut.jpg" />
+    <None Include="Resources\RL_série.jpg" />
+    <None Include="Resources\RC_série.jpg" />
+    <None Include="Resources\RLC_parallèle.jpg" />
+    <None Include="Resources\RLC_série.jpg" />
+    <None Include="Resources\RLC parallèle.jpg" />
+    <None Include="Resources\RLC série1.jpg" />
+    <None Include="Resources\Circuit RLC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
